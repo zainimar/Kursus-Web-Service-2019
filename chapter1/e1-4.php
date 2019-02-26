@@ -16,7 +16,7 @@ $response = $client->request('GET', 'http://localhost:8080/webservice/chapter1/d
 echo $response->getBody();
 echo '<hr>';
 
-//untuk post data
+//untuk post data pula
 $response2 = $client->request('POST', 'http://localhost:8080/webservice/chapter1/data2.php', 
     ['form_params' => 
         [
