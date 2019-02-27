@@ -34,5 +34,6 @@ while($row = mysqli_fetch_array($rs)) {
 
 //3. print data sbg json
 $json = json_encode($arr);
-header('Content-Type : application/json');
+//untuk return default Json bukan Html
+header('Content-Type:application/json');
 echo $json;
