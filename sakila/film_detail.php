@@ -13,6 +13,8 @@ isToken(); // call function isToken() yg dah include n proceed to next line kala
 //3. query data
 // kena cek id sama ada id yg client hantar  betul@salah@tiada id dihantar, dafault to 0
 $id = isset($_GET['idd']) ? $_GET['idd'] : 0; //service ni ade parameter yg die hantar.
+// elak untuk sql injection
+$id = mysqli_real_escape_string($conn,$id);
 $sql = "SELECT * FROM film WHERE film_id = $id";
 $rs =  mysqli_query($conn,$sql);
 
